@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom"
-import { FaLeaf } from "react-icons/fa"
+import { FaLeaf, FaBars, FaTimes } from "react-icons/fa"
+import { useState } from "react"
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => setIsOpen(!isOpen)
+
   return (
     <nav style={{
       backgroundColor: 'black',
@@ -14,6 +19,7 @@ export default function Navbar() {
       borderRadius: '9999px',
       maxWidth: '48rem',
       margin: '1rem auto',
+      position: 'relative',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         <div style={{
@@ -24,12 +30,14 @@ export default function Navbar() {
         }}>
           <FaLeaf color="black" size={24} />
         </div>
-        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Work</Link>
-        <Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>About</Link>
-        <Link to="/playground" style={{ color: 'white', textDecoration: 'none' }}>Playground</Link>
-        <Link to="/resource" style={{ color: 'white', textDecoration: 'none' }}>Resource</Link>
+        <div className="nav-links">
+          <Link to="/" >Work</Link>
+          <Link to="/about" >About</Link>
+          <Link to="/playground" >Playground</Link>
+          <Link to="/Contact" >Contact</Link>
+        </div>
       </div>
-      <div>
+      <div className="nav-right">
         <a href="mailto:webworrier@gmail.com" style={{
           backgroundColor: 'white',
           color: 'black',
@@ -45,7 +53,36 @@ export default function Navbar() {
         >
           webworrier@gmail.com
         </a>
+        <button className="hamburger" onClick={toggleMenu} style={{
+          background: 'none',
+          border: 'none',
+          color: 'white',
+          fontSize: '1.5rem',
+          cursor: 'pointer',
+          marginLeft: '1rem'
+        }}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+      {isOpen && (
+        <div className="mobile-menu" style={{
+          position: 'absolute',
+          top: '100%',
+          left: 0,
+          right: 0,
+          backgroundColor: '#000000b3',
+          borderRadius: '0 0 9999px 9999px',
+          padding: '1rem',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
+          zIndex: 1000,
+          height: 'auto',
+        }}>
+          <Link to="/" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>Work</Link>
+          <Link to="/about" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>About</Link>
+          <Link to="/playground" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>Playground</Link>
+          <Link to="/Contact" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>Contact</Link>
+        </div>
+      )}
     </nav>
   )
 }

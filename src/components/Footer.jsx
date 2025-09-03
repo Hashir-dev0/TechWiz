@@ -22,10 +22,10 @@ export default function Footer() {
       <div style={{ flex: "1 1 200px", marginBottom: "1rem" }}>
         <h3 style={{ marginBottom: "1rem" }}>Quick Links</h3>
         <ul style={{ listStyle: "none", padding: 0, lineHeight: 2 }}>
-          <li><a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a></li>
-          <li><a href="/about" style={{ color: "white", textDecoration: "none" }}>About</a></li>
-          <li><a href="/playground" style={{ color: "white", textDecoration: "none" }}>Playground</a></li>
-          <li><a href="/resource" style={{ color: "white", textDecoration: "none" }}>Resource</a></li>
+          <li><a href="/" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Home</a></li>
+          <li><a href="/about" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>About</a></li>
+          <li><a href="/playground" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Playground</a></li>
+          <li><a href="/contact" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Contact</a></li>
         </ul>
       </div>
 
