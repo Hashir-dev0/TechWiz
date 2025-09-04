@@ -3,7 +3,7 @@ import { BsGeoAlt, BsTelephone, BsEnvelope, BsFacebook, BsTwitter, BsInstagram, 
 export default function Contact() {
   return (
     <>
-      <div className="container mx-auto my-5 d-flex shadow rounded overflow-hidden fade-in">
+      <div className="container mx-auto my-5 d-flex shadow rounded overflow-hidden fade-in" data-aos="fade-up">
         {/* Left Side */}
         <div
           className="col-md-6 position-relative d-flex flex-column justify-content-center p-4 text-white"
@@ -13,6 +13,7 @@ export default function Contact() {
             backgroundPosition: "center",
             minHeight: '400px',
           }}
+          data-aos="slide-right"
         >
           {/* Overlay */}
           <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
@@ -50,7 +51,7 @@ export default function Contact() {
         </div>
 
         {/* Right Side */}
-        <form className="col-md-6 bg-white p-4 d-flex flex-column">
+        <form className="col-md-6 bg-white p-4 d-flex flex-column" data-aos="slide-left">
           <h1 className="h4 fw-bold text-center mb-4">CONTACT US</h1>
           <input
             type="text"
@@ -91,7 +92,7 @@ export default function Contact() {
         </form>
       </div>
       {/* Google Maps Embed */}
-      <div className="container my-4">
+      <div className="container my-4" data-aos="fade-up">
         <iframe
           title="Google Maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.789!2d67.032!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9fb7648c93a4e6d!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890!5m2!1sen!2s"

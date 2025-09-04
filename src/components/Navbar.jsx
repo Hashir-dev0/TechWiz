@@ -20,7 +20,8 @@ export default function Navbar() {
       maxWidth: '48rem',
       margin: '1rem auto',
       position: 'relative',
-    }}>
+      zIndex: 10000,
+    }} data-aos="fade-down">
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         <div style={{
           backgroundColor: 'white',
@@ -31,9 +32,9 @@ export default function Navbar() {
           <FaLeaf color="black" size={24} />
         </div>
         <div className="nav-links">
-          <Link to="/" >Work</Link>
+          <Link to="/" >Home</Link>
           <Link to="/about" >About</Link>
-          <Link to="/playground" >Playground</Link>
+          <Link to="/gallery" >Gallery</Link>
           <Link to="/Contact" >Contact</Link>
         </div>
       </div>
@@ -41,6 +42,7 @@ export default function Navbar() {
         <a href="mailto:webworrier@gmail.com" style={{
           backgroundColor: 'white',
           color: 'black',
+          marginRight: '1.5rem',
           borderRadius: '9999px',
           padding: '0.5rem 1rem',
           boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
@@ -70,17 +72,16 @@ export default function Navbar() {
           top: '100%',
           left: 0,
           right: 0,
-          backgroundColor: '#000000b3',
-          borderRadius: '0 0 9999px 9999px',
+          backgroundColor: 'rgba(0,0,0,0.9)',
           padding: '1rem',
           boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-          zIndex: 1000,
+          zIndex: 9999,
           height: 'auto',
         }}>
-          <Link to="/" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>Work</Link>
-          <Link to="/about" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>About</Link>
-          <Link to="/playground" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>Playground</Link>
-          <Link to="/Contact" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }} onClick={toggleMenu}>Contact</Link>
+          <Link to="/" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem', touchAction: 'manipulation' }} onClick={toggleMenu}>Home</Link>
+          <Link to="/about" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem', touchAction: 'manipulation' }} onClick={toggleMenu}>About</Link>
+          <Link to="/gallery" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem', touchAction: 'manipulation' }} onClick={toggleMenu}>Gallery</Link>
+          <Link to="/Contact" style={{ color: 'white', textDecoration: 'none', display: 'block', marginBottom: '0.5rem', touchAction: 'manipulation' }} onClick={toggleMenu}>Contact</Link>
         </div>
       )}
     </nav>

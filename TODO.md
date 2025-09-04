@@ -1,8 +1,13 @@
-# TODO: Push Contact Page Update to GitHub
+# TODO: Integrate Aos Animations into the App
 
-- [x] Check git status for uncommitted changes
-- [x] Add all changes to staging area
-- [x] Commit changes with message "contact page update"
-- [x] Verify current branch and remote repository
-- [ ] Push changes to GitHub
-- [ ] Confirm push success
+## Steps to Complete:
+- [x] Install Aos library via npm install aos
+- [x] Initialize Aos in src/main.jsx (import Aos and Aos.init())
+- [x] Add Aos animations to src/pages/Home.jsx
+- [x] Add Aos animations to src/pages/About.jsx
+- [x] Add Aos animations to src/pages/Contact.jsx
+- [x] Add Aos animations to src/pages/Gallery.jsx
+- [x] Add Aos animations to src/components/Navbar.jsx
+- [x] Add Aos animations to src/components/Footer.jsx
+- [x] Test the app by running the development server
+- [ ] Adjust animations if needed based on feedback

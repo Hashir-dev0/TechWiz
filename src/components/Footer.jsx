@@ -12,25 +12,26 @@ export default function Footer() {
         width: "100%",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         boxShadow: "0 -2px 6px rgba(0,0,0,0.3)",
-        
+
         bottom: 0,
         left: 0,
         zIndex: 1000,
       }}
+      data-aos="fade-up"
     >
       {/* Quick Links */}
-      <div style={{ flex: "1 1 200px", marginBottom: "1rem" }}>
+      <div style={{ flex: "1 1 200px", marginBottom: "1rem" }} data-aos="fade-right">
         <h3 style={{ marginBottom: "1rem" }}>Quick Links</h3>
         <ul style={{ listStyle: "none", padding: 0, lineHeight: 2 }}>
           <li><a href="/" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Home</a></li>
           <li><a href="/about" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>About</a></li>
-          <li><a href="/playground" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Playground</a></li>
+          <li><a href="/gallery" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Gallary</a></li>
           <li><a href="/contact" style={{ color: "white", textDecoration: "none", transition: "color 0.3s ease" }} onMouseEnter={(e) => e.target.style.color = "#e5e7eb"} onMouseLeave={(e) => e.target.style.color = "white"}>Contact</a></li>
         </ul>
       </div>
 
       {/* Contact Info */}
-      <div style={{ flex: "1 1 200px", marginBottom: "1rem" }}>
+      <div style={{ flex: "1 1 200px", marginBottom: "1rem" }} data-aos="fade-up" data-aos-delay="200">
         <h3 style={{ marginBottom: "1rem" }}>Contact Us</h3>
         <p>Email: <a href="mailto:webworrier@gmail.com" style={{ color: "white", textDecoration: "none" }}>webworrier@gmail.com</a></p>
         <p>Phone: +123 456 7890</p>
@@ -38,18 +39,19 @@ export default function Footer() {
       </div>
 
       {/* Newsletter */}
-      <div style={{ flex: "1 1 200px", marginBottom: "1rem" }}>
-        <h3 style={{ marginBottom: "1rem" , marginLeft: "-150px" }}>Newsletter</h3>
+      <div style={{ flex: "1 1 200px", marginBottom: "1rem" }} data-aos="fade-left" data-aos-delay="400">
+        <h3 style={{ marginBottom: "1rem" }}>Newsletter</h3>
         <form style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           <input
             type="email"
             placeholder="Your email address"
             style={{
               padding: "0.5rem",
-              borderRadius: "150px",
+              borderRadius: "9999px",
               border: "none",
               flex: 1,
-              minWidth: "180px",
+              marginRight: "0.5rem",
+              minWidth: "200px",
               backgroundColor: "white",
               color: "black",
               boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
